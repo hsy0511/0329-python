@@ -93,3 +93,102 @@ print(a)
 ![image](https://user-images.githubusercontent.com/104752580/228414993-a56dbe70-0109-41d3-b1ef-7807a6332316.png)
 
 numpy 배열을 슬라이싱 할 때는 각 차원별로 슬라이스 할 범위를 지정해야한다.
+## numpy 정수 인덱싱
+
+
+## numpy 부울린 인데싱
+```python
+import numpy as np
+ 
+lst = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+a = np.array(lst) # numpy 배열 생성
+ 
+bool_indexing_array = np.array([
+    [False,  True, False], # 1은 false, 2는 true, 3은 false
+    [True, False,  True], # 4은 true, 5는 false, 6은 true
+    [False,  True, False] # 7은 false, 8는 true, 9은 false
+])
+ 
+n = a[bool_indexing_array] # ture와 false로 값을 지정한 것들 중에 true만 나오게 한다.
+print(n)    
+
+```
+### 결과 값
+![image](https://user-images.githubusercontent.com/104752580/228426486-b4eff498-674b-4485-8762-fde075136806.png)
+
+##### 조건식으로 하는 방법
+```python
+import numpy as np
+ 
+lst = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+a = np.array(lst) # numpy 배열 생성
+
+bool_indexing = (a % 2 == 0) # a 리스트에서 값이 2로 나누어서 나머지가 0이 나오는 값을 true
+print(bool_indexing) # True 값만 출력
+```
+numpy 부울린 인덱싱은 배열 각 요소의 선택여부를 True, False로 표현한다.
+## numpy 연산
+#### 더하기
+```python
+import numpy as np
+ 
+a = np.array([1,2,3]) # a라는 numpy 배열 생성
+b = np.array([4,5,6]) # b라는 numpy 배열 생성
+ 
+c = a + b # 배열 a와 배열 b를 더한다.
+c = np.add(a, b) # add() 함수를 사용하여 배열 a와 배열 b를 더한다.
+print(c)
+```
+![image](https://user-images.githubusercontent.com/104752580/228428741-cab342b8-c1c8-4e69-884c-1dff2912004b.png)
+
+#### 빼기
+```python
+import numpy as np
+ 
+a = np.array([1,2,3]) # a라는 numpy 배열 생성
+b = np.array([4,5,6]) # b라는 numpy 배열 생성
+
+c = a - b # 배열 a와 배열 b를 뺀다.
+c = np.subtract(a, b) # subtract() 함수를 사용하여 배열 a와 배열 b를 뺀다.
+print(c)
+```
+![image](https://user-images.githubusercontent.com/104752580/228428760-7236e04b-9f38-4595-a4df-d31acff71456.png)
+
+#### 곱하기
+```python
+import numpy as np
+ 
+a = np.array([1,2,3]) # a라는 numpy 배열 생성
+b = np.array([4,5,6]) # b라는 numpy 배열 생성
+
+c = a * b # 배열 a와 배열 b를 곱한다.
+c = np.multiply(a, b) # multiply() 함수를 사용하여 배열 a와 배열 b를 곱한다.
+print(c) 
+```
+![image](https://user-images.githubusercontent.com/104752580/228428790-a0822141-aefa-409c-82dc-c02e7f951657.png)
+
+### 나누기
+```python
+import numpy as np
+ 
+a = np.array([1,2,3]) # a라는 numpy 배열 생성
+b = np.array([4,5,6]) # b라는 numpy 배열 생성
+
+c = a / b # 배열 a와 배열 b를 나눈다.
+c = np.divide(a, b) # divide() 함수를 사용하여 배열 a와 배열 b를 나눈다.
+print(c)
+```
+![image](https://user-images.githubusercontent.com/104752580/228428814-95b30212-ee8c-4216-82d5-791b1158da47.png)
+
+numpy를 사용하면 배열간의 연산이 편리하다.
+numpy 연산은 사칙 연산으로도 가능하고 
+add(),subtract(),multiply(),divide() 등
+함수를 사용하여 연산을 할 수도 있다.
