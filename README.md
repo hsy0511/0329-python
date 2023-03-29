@@ -198,7 +198,7 @@ print(c)
 ```
 ![image](https://user-images.githubusercontent.com/104752580/228428790-a0822141-aefa-409c-82dc-c02e7f951657.png)
 
-### 나누기
+#### 나누기
 ```python
 import numpy as np
  
@@ -215,3 +215,47 @@ numpy를 사용하면 배열간의 연산이 편리하다.
 numpy 연산은 사칙 연산으로도 가능하고 
 add(),subtract(),multiply(),divide() 등
 함수를 사용하여 연산을 할 수도 있다.
+#### dot() 함수
+```python
+import numpy as np
+ 
+lst1 = [
+    [1,2],
+    [3,4]
+]
+ 
+lst2 = [
+    [5,6],
+    [7,8]
+]
+a = np.array(lst1)
+b = np.array(lst2)
+ 
+c = np.dot(a, b) # dot()는 행렬을 곱하는 함수 이다.
+                 # (1*5+2*7=19, 1*6+2*8=22, 3*5+4*7=43, 3*6+4*8=50)
+print(c)
+```
+![image](https://user-images.githubusercontent.com/104752580/228437867-6a59ba43-7cfa-4294-baaf-e005ef34ff3f.png)
+
+dot() 함수는 배열에서 행렬을 곱하는데 쓰인다.
+#### sum(), prod(), axis
+```python
+a = np.array([[1,2],[3,4]])
+
+s = np.sum(a) # 배열의 요소들을 더함
+print(s)   
+
+s = np.sum(a, axis=0) # 열끼리 더함
+print(s)  
+ 
+s = np.sum(a, axis=1) # 행끼리 더함
+print(s)
+ 
+s = np.prod(a) # 배열의 요소들을 곱한다.
+print(s)
+```
+![image](https://user-images.githubusercontent.com/104752580/228438761-b37233b5-bbe5-4cc9-a0bf-65a0166fb07e.png)
+
+sum 함수는 배열의 요소들을 더한다.
+prod 함수는 배열의 요소들을 곱한다.
+axis 위 함수들의 선택 옵션으로 axis가 0이면 열끼리 연산하고, axis가 1이면 행끼리 연산하는 선택옵션이다.
