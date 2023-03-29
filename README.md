@@ -155,7 +155,8 @@ lst = [
 a = np.array(lst) # numpy 배열 생성
 
 bool_indexing = (a % 2 == 0) # a 리스트에서 값이 2로 나누어서 나머지가 0이 나오는 값을 true
-print(bool_indexing) # True 값만 출력
+b[bool_indexing]
+print(b) # True 값만 출력
 ```
 numpy 부울린 인덱싱은 배열 각 요소의 선택여부를 True, False로 표현한다.
 ## numpy 연산
